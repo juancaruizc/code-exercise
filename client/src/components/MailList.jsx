@@ -11,7 +11,9 @@ import shredIcon from "../images/shred-icon.svg";
 
 function MailList() {
   // eslint-disable-next-line
-  const [mailList, setMailList] = useState(mailData);
+  const [mailList, setMailList] = useState(mailData.slice(0, 6));
+  const [disableNextButton, setDisableNextButton] = useState(false);
+  const [disablePreviousButton, setDisablePreviousButton] = useState(true);
 
   return (
     <Container className="mail-list">
@@ -65,7 +67,7 @@ function MailList() {
                       className="icon"
                       src={
                         mail.forward.status === "completed"
-                          ? shredIcon
+                          ? forwardIcon
                           : processingIcon
                       }
                       alt=""
@@ -84,7 +86,7 @@ function MailList() {
                       className="icon"
                       src={
                         mail.shred.status === "completed"
-                          ? forwardIcon
+                          ? shredIcon
                           : processingIcon
                       }
                       alt=""
@@ -112,8 +114,27 @@ function MailList() {
             <strong>{mailData.length}</strong> mail items
           </p>
           <div className="buttonContainer">
-            <button>Previous</button>
-            <button>Next</button>
+            <button
+              disabled={disablePreviousButton}
+              onClick={() => {
+                setMailList(mailData.slice(0, 6));
+                setDisablePreviousButton(!disablePreviousButton);
+                setDisableNextButton(!disableNextButton);
+              }}
+            >
+              Previous
+            </button>
+
+            <button
+              disabled={disableNextButton}
+              onClick={() => {
+                setMailList(mailData.slice(6, 12));
+                setDisableNextButton(!disableNextButton);
+                setDisablePreviousButton(!disablePreviousButton);
+              }}
+            >
+              Next
+            </button>
           </div>
         </div>
       </div>
@@ -122,3 +143,15 @@ function MailList() {
 }
 
 export default MailList;
+
+// Pagination system accommodates for project requirements and is somewhat hackish.
+// This is the quickest way I found to build the pagination system for this project.
+// However, if there would be a need to build a more robust pagination system with more data,
+// There would be several ways to do it. We can use a variety of libraries such as react-paginate
+// or potentially the usePaginate hook. There is always the option to build custom pagination as well
+// better suited for more data.
+
+// One *potential* way to build a custom pagination system with more data would be to create slices of state
+// for the current starting and current ending indexes of the array, set them as default values in the mailList state
+// and adjust the indexes currently in the array accordingly in the onClicks. This would allow for *potentially* a more
+// dynamic pagination system.
