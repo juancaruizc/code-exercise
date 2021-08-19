@@ -9,6 +9,19 @@ const Container = styled.div`
     width: 200px;
     margin-left: 30px;
   }
+
+  @media (max-width: 415px) {
+    img {
+      width: 130px;
+    }
+  }
+
+  @media (max-width: 375px) {
+    /* width: 100%; */
+    img {
+      width: 130px;
+    }
+  }
 `;
 
 export default Container;

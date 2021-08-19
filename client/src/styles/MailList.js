@@ -114,7 +114,8 @@ const Container = styled.div`
   .main {
     display: flex;
     flex-wrap: wrap;
-    width: 38%;
+    /* width: 38%; */
+    width: 70%;
     justify-content: space-between;
   }
 
@@ -124,7 +125,8 @@ const Container = styled.div`
   }
 
   .mailListInnerFooter {
-    width: 38%;
+    /* width: 38%; */
+    width: 68%;
     display: flex;
   }
 
@@ -152,6 +154,78 @@ const Container = styled.div`
     font-size: 16px;
     font-family: Noto Sans;
     width: 120px;
+  }
+
+  /* @media (max-width: 2500px) {
+    .mailListInnerFooter {
+      width: 38%;
+    }
+
+    .main {
+      width: 38%;
+    }
+  } */
+
+  @media (max-width: 1024px) {
+    .main {
+      width: 95%;
+    }
+
+    .mailListInnerFooter {
+      width: 95%;
+    }
+  }
+
+  @media (max-width: 415px) {
+    .main {
+      display: flex;
+      justify-content: center;
+    }
+
+    .mailListInnerFooter {
+      width: 72%;
+    }
+
+    button {
+      width: 70px;
+      height: 35px;
+      font-size: 14px;
+    }
+
+    .buttonContainer {
+      margin-left: 48px;
+      width: 170px;
+    }
+
+    .totalMailItems {
+      width: 120px;
+    }
+  }
+
+  @media (max-width: 375px) {
+    .main {
+      display: flex;
+      justify-content: center;
+    }
+
+    .mailListInnerFooter {
+      width: 80%;
+    }
+
+    button {
+      width: 70px;
+      height: 35px;
+      font-size: 14px;
+    }
+
+    .buttonContainer {
+      margin-left: 48px;
+      width: 170px;
+    }
+
+    .totalMailItems {
+      width: 120px;
+    }
   }
 `;
 

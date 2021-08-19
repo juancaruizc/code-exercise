@@ -8,7 +8,8 @@ const Container = styled.div`
   .headerContainer {
     display: flex;
     flex-direction: column;
-    width: 38%;
+    width: 68%;
+    /* width: 38%; */
   }
 
   .mailHeader {
@@ -32,6 +33,38 @@ const Container = styled.div`
     font-family: Noto Sans;
     font-style: normal;
     font-weight: normal;
+  }
+
+  /* @media (max-width: 2500px) {
+    .headerContainer {
+      width: 38%;
+    }
+  } */
+
+  @media (max-width: 1024px) {
+    .headerContainer {
+      width: 95%;
+    }
+  }
+
+  @media (max-width: 415px) {
+    .mailHeader {
+      font-size: 24px;
+    }
+
+    .headerContainer {
+      width: 73%;
+    }
+
+    .mailSubHeader {
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 375px) {
+    .headerContainer {
+      width: 80%;
+    }
   }
 `;
 
