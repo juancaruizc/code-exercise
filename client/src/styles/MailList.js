@@ -156,16 +156,6 @@ const Container = styled.div`
     width: 120px;
   }
 
-  /* @media (max-width: 2500px) {
-    .mailListInnerFooter {
-      width: 38%;
-    }
-
-    .main {
-      width: 38%;
-    }
-  } */
-
   @media (max-width: 1024px) {
     .main {
       width: 95%;
@@ -187,18 +177,19 @@ const Container = styled.div`
     }
 
     button {
-      width: 70px;
+      width: 100px;
       height: 35px;
       font-size: 14px;
+      margin-left: 12px;
     }
 
     .buttonContainer {
-      margin-left: 48px;
-      width: 170px;
+      margin-left: 12px;
+      width: 180px;
     }
 
     .totalMailItems {
-      width: 120px;
+      width: 105px;
     }
   }
 
@@ -213,18 +204,19 @@ const Container = styled.div`
     }
 
     button {
-      width: 80px;
+      width: 75px;
       height: 35px;
-      font-size: 14px;
+      font-size: 12px;
     }
 
     .buttonContainer {
-      margin-left: 40px;
-      width: 185px;
+      /* margin-left: 45px; */
+      /* width: 200px; */
+      /* border: 2px solid red; */
     }
 
     .totalMailItems {
-      width: 40%;
+      width: 260px;
     }
   }
 `;
