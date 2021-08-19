@@ -15,6 +15,35 @@ function MailList() {
   const [disableNextButton, setDisableNextButton] = useState(false);
   const [disablePreviousButton, setDisablePreviousButton] = useState(true);
 
+  function monthChanger(month) {
+    if (month === 1) {
+      return "January";
+    } else if (month === 2) {
+      return "February";
+    } else if (month === 3) {
+      return "March";
+    } else if (month === 4) {
+      return "April";
+    } else if (month === 5) {
+      return "May";
+    } else if (month === 6) {
+      return "June";
+    } else if (month === 7) {
+      return "July";
+    } else if (month === 8) {
+      return "August";
+    } else if (month === 9) {
+      return "September";
+    } else if (month === 10) {
+      return "October";
+    } else if (month === 11) {
+      return "November";
+    } else if (month === 12) {
+      return "December";
+    }
+    return month;
+  }
+
   return (
     <Container className="mail-list">
       <MailListHeader />
@@ -25,7 +54,6 @@ function MailList() {
               <div className="mailImageContainer">
                 <img className="mailImage" src={mail.imageUrl} alt="mail" />
               </div>
-
               <div className="mailDetailsOuterContainer">
                 <h1>{mail.from}</h1>
                 {mail.businessRecipient && (
@@ -101,8 +129,22 @@ function MailList() {
               </div>
 
               <div className="mailListDate">
-                <p className="date">August 12, 2021</p>
+                <p className="date">
+                  {`${
+                    new Date(mail.timestamp).getDate() + 1 === 32
+                      ? monthChanger(new Date(mail.timestamp).getMonth() + 2)
+                      : monthChanger(new Date(mail.timestamp).getMonth() + 1)
+                  }
+                  ${
+                    new Date(mail.timestamp).getDate() + 1 === 32
+                      ? 1
+                      : new Date(mail.timestamp).getDate() + 1
+                  }
+                  , ${new Date(mail.timestamp).getFullYear()}`}
+                </p>
               </div>
+              {/* Logic not accounting February and months ending in 30th edge cases, however, this can be achieved by 
+              adding more conditional logic - if specified month and day is 31 start at 1st and run over to next month */}
             </div>
           ))}
         </div>
