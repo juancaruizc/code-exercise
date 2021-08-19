@@ -10,6 +10,7 @@ import forwardIcon from "../images/forward-icon.svg";
 import shredIcon from "../images/shred-icon.svg";
 
 function MailList() {
+  // eslint-disable-next-line
   const [mailList, setMailList] = useState(mailData);
 
   return (
