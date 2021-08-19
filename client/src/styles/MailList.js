@@ -213,18 +213,18 @@ const Container = styled.div`
     }
 
     button {
-      width: 70px;
+      width: 80px;
       height: 35px;
       font-size: 14px;
     }
 
     .buttonContainer {
-      margin-left: 48px;
-      width: 170px;
+      margin-left: 40px;
+      width: 185px;
     }
 
     .totalMailItems {
-      width: 120px;
+      width: 40%;
     }
   }
 `;
