@@ -75,6 +75,13 @@ const Container = styled.div`
     transition: 0.2s ease-in-out;
   }
 
+  button:disabled {
+    background: #ffffff;
+    color: #c0c0c0;
+
+    border: 1px solid #c4c4c4;
+  }
+
   .mailListFooter {
     display: flex;
   }
