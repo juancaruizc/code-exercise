@@ -35,18 +35,14 @@ const Container = styled.div`
     font-weight: normal;
   }
 
-  /* @media (max-width: 2500px) {
-    .headerContainer {
-      width: 38%;
-    }
-  } */
-
+  /* iPad Pro */
   @media (max-width: 1024px) {
     .headerContainer {
       width: 95%;
     }
   }
 
+  /* iPhone XS Max */
   @media (max-width: 415px) {
     .mailHeader {
       font-size: 24px;
@@ -61,6 +57,7 @@ const Container = styled.div`
     }
   }
 
+  /* iPhone X */
   @media (max-width: 375px) {
     .headerContainer {
       width: 80%;
