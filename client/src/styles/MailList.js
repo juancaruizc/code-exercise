@@ -29,7 +29,8 @@ const Container = styled.div`
     margin-bottom: 5px;
     color: #000000;
 
-    font-style: normal;
+    font-family: PT Sans;
+    /* font-style: normal; */
     font-weight: bold;
   }
 

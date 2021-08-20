@@ -16,8 +16,8 @@ const Container = styled.div`
     margin: 0;
 
     color: #080708;
-
-    font-style: normal;
+    font-family: PT Sans;
+    /* font-style: normal; */
     font-weight: bold;
   }
 
