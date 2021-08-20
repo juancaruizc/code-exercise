@@ -9,7 +9,6 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
     width: 68%;
-    /* width: 38%; */
   }
 
   .mailHeader {
@@ -18,7 +17,6 @@ const Container = styled.div`
 
     color: #080708;
 
-    font-family: PT Sans;
     font-style: normal;
     font-weight: bold;
   }
