@@ -17,7 +17,7 @@ const Container = styled.div`
 
     color: #080708;
     font-family: PT Sans;
-    /* font-style: normal; */
+    font-style: normal;
     font-weight: bold;
   }
 
@@ -38,6 +38,12 @@ const Container = styled.div`
     .headerContainer {
       width: 95%;
     }
+
+    h1 {
+      font-family: PT Sans;
+      font-style: normal;
+      font-weight: bold;
+    }
   }
 
   /* iPhone XS Max */
@@ -53,12 +59,24 @@ const Container = styled.div`
     .mailSubHeader {
       font-size: 14px;
     }
+
+    h1 {
+      font-family: PT Sans;
+      font-style: normal;
+      font-weight: bold;
+    }
   }
 
   /* iPhone X */
   @media (max-width: 375px) {
     .headerContainer {
       width: 80%;
+    }
+
+    h1 {
+      font-family: PT Sans;
+      font-style: normal;
+      font-weight: bold;
     }
   }
 `;

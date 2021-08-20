@@ -30,7 +30,7 @@ const Container = styled.div`
     color: #000000;
 
     font-family: PT Sans;
-    /* font-style: normal; */
+    font-style: normal;
     font-weight: bold;
   }
 
@@ -163,6 +163,12 @@ const Container = styled.div`
     .mailListInnerFooter {
       width: 95%;
     }
+
+    h1 {
+      font-family: PT Sans;
+      font-style: normal;
+      font-weight: bold;
+    }
   }
 
   /* iPhone XS Max */
@@ -191,6 +197,12 @@ const Container = styled.div`
     .totalMailItems {
       width: 105px;
     }
+
+    h1 {
+      font-family: PT Sans;
+      font-style: normal;
+      font-weight: bold;
+    }
   }
 
   /* iPhone X */
@@ -212,6 +224,12 @@ const Container = styled.div`
 
     .totalMailItems {
       width: 260px;
+    }
+
+    h1 {
+      font-family: PT Sans;
+      font-style: normal;
+      font-weight: bold;
     }
   }
 `;
