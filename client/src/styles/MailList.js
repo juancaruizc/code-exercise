@@ -114,7 +114,6 @@ const Container = styled.div`
   .main {
     display: flex;
     flex-wrap: wrap;
-    /* width: 38%; */
     width: 70%;
     justify-content: space-between;
   }
@@ -125,7 +124,6 @@ const Container = styled.div`
   }
 
   .mailListInnerFooter {
-    /* width: 38%; */
     width: 68%;
     display: flex;
   }
@@ -156,6 +154,7 @@ const Container = styled.div`
     width: 120px;
   }
 
+  /* iPad Pro */
   @media (max-width: 1024px) {
     .main {
       width: 95%;
@@ -166,6 +165,7 @@ const Container = styled.div`
     }
   }
 
+  /* iPhone XS Max */
   @media (max-width: 415px) {
     .main {
       display: flex;
@@ -193,6 +193,7 @@ const Container = styled.div`
     }
   }
 
+  /* iPhone X */
   @media (max-width: 375px) {
     .main {
       display: flex;
@@ -207,12 +208,6 @@ const Container = styled.div`
       width: 75px;
       height: 35px;
       font-size: 12px;
-    }
-
-    .buttonContainer {
-      /* margin-left: 45px; */
-      /* width: 200px; */
-      /* border: 2px solid red; */
     }
 
     .totalMailItems {

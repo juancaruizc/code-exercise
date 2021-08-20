@@ -10,14 +10,15 @@ const Container = styled.div`
     margin-left: 30px;
   }
 
+  /* iPhone XS Max */
   @media (max-width: 415px) {
     img {
       width: 130px;
     }
   }
 
+  /* iPhone X */
   @media (max-width: 375px) {
-    /* width: 100%; */
     img {
       width: 130px;
     }
